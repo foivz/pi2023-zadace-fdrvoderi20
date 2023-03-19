@@ -14,7 +14,7 @@ Filip Drvoderić | fdrvoderi20@student.foi.hr | 0016150980 | fdrvoderi20
 (Vlastitim riječima opišite zahtjeve za izradu ovog programskog proizvoda!)
 
 ## Zadatak
-(U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
+[Handling ERASMUS Students](https://github.com/foivz/pi2023-zadace-fdrvoderi20/blob/67e776290563a4a491affcdcd38d40ff3d7c24e0/Documentation/User%20Requirements%20-%20Handling%20ERASMUS%20Students.pdf)
 
 ## Resursi
 (Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
