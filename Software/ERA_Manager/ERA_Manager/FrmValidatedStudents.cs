@@ -46,5 +46,16 @@ namespace ERA_Manager
             frmStudents.ShowDialog();
             Close();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Validation selectedValidatedStudent = dgvValidatedStudents.CurrentRow.DataBoundItem as Validation;
+
+            ValidationRepository.DeleteValidatedStudent(selectedValidatedStudent.StudentID);
+
+            dgvValidatedStudents.Refresh();
+            ShowValidatedStudents();
+
+        }
     }
 }

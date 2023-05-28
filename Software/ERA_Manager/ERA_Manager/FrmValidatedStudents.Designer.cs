@@ -80,6 +80,7 @@ namespace ERA_Manager
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete selected student";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnBack
             // 

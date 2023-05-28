@@ -63,5 +63,16 @@ namespace ERA_Manager.Repositories
             };
             return student;
         }
+
+        public static void DeleteValidatedStudent(int id) {
+
+            string sql = $"DELETE FROM Validation WHERE StudentID ='{id}'";
+
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+
     }
 }

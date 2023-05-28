@@ -46,5 +46,21 @@ namespace ERA_Manager.Repositories
             return student;
         }
 
+        public static List<Student> SearchStudent(string search)
+        { 
+            List<Student> students = new List<Student>();
+            string sql = $"SELECT * FROM Students INNER JOIN Person ON Students.Id = Person.Id WHERE Preference ='{search}'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                Student student = CreateObject(reader);
+                students.Add(student);
+            }
+            reader.Close();
+            DB.CloseConnection();
+            return students;
+        }
+
     }
 }

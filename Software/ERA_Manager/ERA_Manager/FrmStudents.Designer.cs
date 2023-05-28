@@ -41,6 +41,7 @@ namespace ERA_Manager
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +107,7 @@ namespace ERA_Manager
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(998, 396);
+            this.label1.Location = new System.Drawing.Point(998, 348);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 7;
@@ -114,19 +115,31 @@ namespace ERA_Manager
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(1001, 412);
+            this.txtSearch.Location = new System.Drawing.Point(1001, 364);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(109, 20);
             this.txtSearch.TabIndex = 8;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(1001, 447);
+            this.btnSearch.Location = new System.Drawing.Point(1001, 399);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(109, 35);
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnReset.Location = new System.Drawing.Point(1001, 447);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(109, 35);
+            this.btnReset.TabIndex = 10;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // FrmStudents
             // 
@@ -134,6 +147,7 @@ namespace ERA_Manager
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1152, 521);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
@@ -163,5 +177,6 @@ namespace ERA_Manager
         private Label label1;
         private TextBox txtSearch;
         private Button btnSearch;
+        private Button btnReset;
     }
 }

@@ -35,6 +35,8 @@ namespace ERA_Manager
             dgvStudents.Columns["Preference"].DisplayIndex= 4;
         }
 
+
+
         private void btnValidate_Click(object sender, EventArgs e)
         {
             Student selectedStudent = dgvStudents.CurrentRow.DataBoundItem as Student;
@@ -53,6 +55,18 @@ namespace ERA_Manager
             FrmValidatedStudents frmValidatedStudents = new FrmValidatedStudents();
             frmValidatedStudents.ShowDialog();
             Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var search = txtSearch.Text;
+            List<Student> students = StudentRepository.SearchStudent(search);
+            dgvStudents.DataSource = students;
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            ShowStudents();
         }
     }
 }
