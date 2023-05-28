@@ -31,6 +31,7 @@ namespace ERA_Manager
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStudents));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.lblName = new System.Windows.Forms.Label();
@@ -140,6 +141,7 @@ namespace ERA_Manager
             this.Controls.Add(this.lblList);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.dgvStudents);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmStudents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmStudents";
