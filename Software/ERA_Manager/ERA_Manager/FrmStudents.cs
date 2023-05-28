@@ -37,24 +37,11 @@ namespace ERA_Manager
 
 
 
-        private void btnValidate_Click(object sender, EventArgs e)
-        {
-            Student selectedStudent = dgvStudents.CurrentRow.DataBoundItem as Student;
-
-            FrmValidation frmValidation = new FrmValidation(selectedStudent);
-            //frmValidation.ShowDialog();
-            if(frmValidation.ShowDialog() == DialogResult.OK)
-            {
-                dgvStudents.Refresh();
-                ShowStudents();
-            }
-        }
 
         private void btnShow_Click(object sender, EventArgs e)
         {
             FrmValidatedStudents frmValidatedStudents = new FrmValidatedStudents();
             frmValidatedStudents.ShowDialog();
-            Close();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -66,7 +53,29 @@ namespace ERA_Manager
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            txtSearch.Text = "";
             ShowStudents();
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            FrmAddStudent frmAddStudent = new FrmAddStudent();
+            frmAddStudent.ShowDialog();
+            dgvStudents.Refresh();
+            ShowStudents();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            Student selectedStudent = dgvStudents.CurrentRow.DataBoundItem as Student;
+
+            FrmValidation frmValidation = new FrmValidation(selectedStudent);
+            //frmValidation.ShowDialog();
+            if (frmValidation.ShowDialog() == DialogResult.OK)
+            {
+                dgvStudents.Refresh();
+                ShowStudents();
+            }
         }
     }
 }

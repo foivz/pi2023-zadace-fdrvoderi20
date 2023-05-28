@@ -42,8 +42,6 @@ namespace ERA_Manager
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            FrmStudents frmStudents = new FrmStudents();
-            frmStudents.ShowDialog();
             Close();
         }
 

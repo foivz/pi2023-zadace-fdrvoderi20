@@ -55,5 +55,19 @@ namespace ERA_Manager
             Close();
 
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            var firstname = txtFirstName.Text;
+            var lastname = txtLastName.Text;
+            var motivation = txtMotivation.Text;
+            var preference = txtPreference.Text;
+            var possibleDestinations = txtPossibleDestinations.Text;
+            var validator = txtValidatedBy.Text;
+
+            StudentRepository.UpdateStudent(firstname, lastname, motivation, preference, id);
+            this.DialogResult = DialogResult.OK;
+            Close();
+        }
     }
 }

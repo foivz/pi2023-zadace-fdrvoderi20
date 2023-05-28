@@ -49,7 +49,7 @@ namespace ERA_Manager.Repositories
         public static List<Student> SearchStudent(string search)
         { 
             List<Student> students = new List<Student>();
-            string sql = $"SELECT * FROM Students INNER JOIN Person ON Students.Id = Person.Id WHERE Preference ='{search}'";
+            string sql = $"SELECT * FROM Students INNER JOIN Person ON Students.Id = Person.Id WHERE Preference like '%{search}%'";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             while (reader.Read())
@@ -61,6 +61,23 @@ namespace ERA_Manager.Repositories
             DB.CloseConnection();
             return students;
         }
+        public static void AddStudent(string firstname, string lastname, string motivation, string preference)
+        {
+            string sql1 = $"INSERT INTO Students (Motivation, Preference) VALUES ('{motivation}', '{preference}')";
+            string sql2 = $"INSERT INTO Person (FirstName, LastName) VALUES ('{firstname}', '{lastname}')";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql2);
+            DB.ExecuteCommand(sql1);
+            DB.CloseConnection();
+        }
 
+        public static void UpdateStudent(string firstname, string lastname, string motivation, string preference, int id) {
+            string sql1 = $"UPDATE Person SET FirstName = '{firstname}', LastName='{lastname}' WHERE Id = '{id}'";
+            string sql2 = $"UPDATE Students SET Motivation = '{motivation}', Preference='{preference}' WHERE Id = '{id}'";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql1);
+            DB.ExecuteCommand(sql2);
+            DB.CloseConnection();
+        }
     }
 }

@@ -44,6 +44,7 @@
             this.txtPossibleDestinations = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnValidate = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblName
@@ -181,9 +182,9 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnCancel.Location = new System.Drawing.Point(73, 684);
+            this.btnCancel.Location = new System.Drawing.Point(72, 668);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(93, 39);
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -192,13 +193,24 @@
             // btnValidate
             // 
             this.btnValidate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnValidate.Location = new System.Drawing.Point(386, 684);
+            this.btnValidate.Location = new System.Drawing.Point(368, 668);
             this.btnValidate.Name = "btnValidate";
-            this.btnValidate.Size = new System.Drawing.Size(75, 23);
+            this.btnValidate.Size = new System.Drawing.Size(93, 39);
             this.btnValidate.TabIndex = 18;
             this.btnValidate.Text = "Validate";
             this.btnValidate.UseVisualStyleBackColor = false;
             this.btnValidate.Click += new System.EventHandler(this.btnValidate_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUpdate.Location = new System.Drawing.Point(217, 668);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(93, 39);
+            this.btnUpdate.TabIndex = 19;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // FrmValidation
             // 
@@ -206,6 +218,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(528, 743);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnValidate);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtPossibleDestinations);
@@ -248,5 +261,6 @@
         private System.Windows.Forms.TextBox txtPossibleDestinations;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnValidate;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

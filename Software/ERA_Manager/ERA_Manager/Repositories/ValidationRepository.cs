@@ -17,9 +17,11 @@ namespace ERA_Manager.Repositories
             //string sql1 = $"UPDATE Validation SET FirstName = '{firstname}', LastName = '{lastname}', Motivation = '{motivation}', Preference = '{preference}', PossibleDestinations = '{possibleDestinations}', ValidatedBy = '{validator}' WHERE StudentID = '{id}'";
             string sql1 = $"INSERT INTO Validation (FirstName, LastName, Motivation, Preference, PossibleDestinations, ValidatedBy, StudentID) VALUES ('{firstname}', '{lastname}', '{motivation}', '{preference}', '{possibleDestinations}', '{validator}', '{id}')";
             string sql2 = $"DELETE FROM Students WHERE Id='{id}'";
+            string sql3 = $"DELETE FROM Person WHERE Id='{id}'";
             DB.OpenConnection();
             DB.ExecuteCommand(sql1);
             DB.ExecuteCommand(sql2);
+            DB.ExecuteCommand(sql3);
             DB.CloseConnection();
         }
 
