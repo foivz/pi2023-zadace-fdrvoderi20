@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERA_Manager", "ERA_Manager\ERA_Manager.csproj", "{D6F4E18D-FD7E-4498-A394-920101377105}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6F4E18D-FD7E-4498-A394-920101377105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F4E18D-FD7E-4498-A394-920101377105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F4E18D-FD7E-4498-A394-920101377105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F4E18D-FD7E-4498-A394-920101377105}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46D87E45-0F54-4C87-9E69-A6AC984DF199}
+	EndGlobalSection
+EndGlobal
