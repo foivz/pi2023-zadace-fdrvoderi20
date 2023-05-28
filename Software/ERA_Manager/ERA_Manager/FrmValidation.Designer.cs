@@ -140,6 +140,8 @@
             // 
             // txtValidatedBy
             // 
+            this.txtValidatedBy.CausesValidation = false;
+            this.txtValidatedBy.Cursor = System.Windows.Forms.Cursors.No;
             this.txtValidatedBy.Location = new System.Drawing.Point(166, 600);
             this.txtValidatedBy.Name = "txtValidatedBy";
             this.txtValidatedBy.ReadOnly = true;
@@ -185,6 +187,7 @@
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnValidate
             // 
@@ -195,6 +198,7 @@
             this.btnValidate.TabIndex = 18;
             this.btnValidate.Text = "Validate";
             this.btnValidate.UseVisualStyleBackColor = false;
+            this.btnValidate.Click += new System.EventHandler(this.btnValidate_Click);
             // 
             // FrmValidation
             // 

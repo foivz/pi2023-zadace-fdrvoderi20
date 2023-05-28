@@ -91,6 +91,7 @@ namespace ERA_Manager
             this.btnShow.TabIndex = 5;
             this.btnShow.Text = "Show validated students";
             this.btnShow.UseVisualStyleBackColor = true;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnValidate
             // 

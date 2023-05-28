@@ -40,8 +40,12 @@ namespace ERA_Manager
             Student selectedStudent = dgvStudents.CurrentRow.DataBoundItem as Student;
 
             FrmValidation frmValidation = new FrmValidation(selectedStudent);
-            frmValidation.ShowDialog();
-
+            //frmValidation.ShowDialog();
+            if(frmValidation.ShowDialog() == DialogResult.OK)
+            {
+                dgvStudents.Refresh();
+                ShowStudents();
+            }
         }
     }
 }
