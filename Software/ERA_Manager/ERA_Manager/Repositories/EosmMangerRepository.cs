@@ -13,30 +13,30 @@ namespace ERA_Manager.Repositories
     {
         public static EosmManager GetManger(int id)
         {
-            return FetchTeacher($"SELECT * FROM Teachers WHERE Id = {id}");
+            return FetchManager($"SELECT * FROM EosmManager WHERE Id = {id}");
         }
 
-        public static Teacher GetTeacher(string username)
+        public static EosmManager GetManager(string username)
         {
-            return FetchTeacher($"SELECT * FROM Teachers WHERE Username = '{username}'");
+            return FetchManager($"SELECT * FROM EosmManager,Person WHERE Username = '{username}'");
         }
 
-        private static Teacher FetchTeacher(string sql)
+        private static EosmManager FetchManager(string sql)
         {
-            Teacher teacher = null;
+            EosmManager manager = null;
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if (reader.HasRows)
             {
                 reader.Read();
-                teacher = CreateObject(reader);
+                manager = CreateObject(reader);
                 reader.Close();
             }
             DB.CloseConnection();
-            return teacher;
+            return manager;
         }
 
-        private static Teacher CreateObject(SqlDataReader reader)
+        private static EosmManager CreateObject(SqlDataReader reader)
         {
             int id = int.Parse(reader["Id"].ToString());
             string firstName = reader["FirstName"].ToString();
@@ -44,7 +44,7 @@ namespace ERA_Manager.Repositories
             string username = reader["Username"].ToString();
             string password = reader["Password"].ToString();
 
-            var teacher = new Teacher
+            var manager = new EosmManager
             {
                 Id = id,
                 FirstName = firstName,
@@ -52,8 +52,8 @@ namespace ERA_Manager.Repositories
                 Username = username,
                 Password = password
             };
-            return teacher;
+            return manager;
         }
     }
 }
-}
+

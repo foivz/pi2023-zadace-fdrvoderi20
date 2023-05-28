@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ERA_Manager.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace ERA_Manager
         public FrmStudents()
         {
             InitializeComponent();
+        }
+
+        private void FrmStudents_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

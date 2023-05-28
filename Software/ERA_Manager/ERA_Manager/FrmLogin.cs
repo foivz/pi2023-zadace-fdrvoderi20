@@ -27,7 +27,7 @@ namespace ERA_Manager
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
-            Logg
+            LoggedManager = EosmMangerRepository.GetManager(username);
 
             if (txtUsername.Text == "")
             {
@@ -40,7 +40,7 @@ namespace ERA_Manager
             else
             {
 
-                if (txtPassword.Text == password && txtUsername.Text==username)
+                if (LoggedManager != null && LoggedManager.CheckPassword(password))
 
                 {
                     FrmStudents frmStudents = new FrmStudents();
