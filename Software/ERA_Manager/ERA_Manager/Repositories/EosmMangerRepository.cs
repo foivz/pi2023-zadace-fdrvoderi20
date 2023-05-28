@@ -11,10 +11,6 @@ namespace ERA_Manager.Repositories
 {
     public class EosmMangerRepository
     {
-        public static EosmManager GetManger(int id)
-        {
-            return FetchManager($"SELECT * FROM EosmManager WHERE Id = {id}");
-        }
 
         public static EosmManager GetManager(string username)
         {

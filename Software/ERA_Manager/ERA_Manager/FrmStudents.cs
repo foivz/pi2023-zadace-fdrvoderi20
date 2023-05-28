@@ -35,5 +35,13 @@ namespace ERA_Manager
             dgvStudents.Columns["Preference"].DisplayIndex= 4;
         }
 
+        private void btnValidate_Click(object sender, EventArgs e)
+        {
+            Student selectedStudent = dgvStudents.CurrentRow.DataBoundItem as Student;
+
+            FrmValidation frmValidation = new FrmValidation(selectedStudent);
+            frmValidation.ShowDialog();
+
+        }
     }
 }
