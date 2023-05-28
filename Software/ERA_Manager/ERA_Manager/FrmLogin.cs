@@ -7,21 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ERA_Manager.Models;
+using ERA_Manager.Repositories;
 
 namespace ERA_Manager
 {
     public partial class FrmLogin : Form
     {
+
+        public static EosmManager LoggedManager { get; set; }
+
         public FrmLogin()
         {
             InitializeComponent();
         }
 
-        string username = "test";
-        string password = "test";
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            Logg
+
             if (txtUsername.Text == "")
             {
                 MessageBox.Show("Username missing !", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);

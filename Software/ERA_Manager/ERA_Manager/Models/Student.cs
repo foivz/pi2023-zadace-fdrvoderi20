@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ERA_Manager.Models
 {
-    public class Student
+    public class Student : Person
     {
         public string Motivation { get; set; }
         public string Preferences { get; set; }

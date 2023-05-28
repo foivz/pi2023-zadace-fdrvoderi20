@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace ERA_Manager
         [STAThread]
         static void Main()
         {
+            DB.SetConfiguration("IPS23_fdrvoderi20", "fdrvoderi20", "ZgnD$V10");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmLogin());
