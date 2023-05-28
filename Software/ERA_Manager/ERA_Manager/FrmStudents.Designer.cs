@@ -78,9 +78,9 @@ namespace ERA_Manager
             this.lblList.ForeColor = System.Drawing.Color.RoyalBlue;
             this.lblList.Location = new System.Drawing.Point(28, 82);
             this.lblList.Name = "lblList";
-            this.lblList.Size = new System.Drawing.Size(236, 31);
+            this.lblList.Size = new System.Drawing.Size(452, 31);
             this.lblList.TabIndex = 4;
-            this.lblList.Text = "List of all aplicants";
+            this.lblList.Text = "List of Applicants Pending Validation";
             this.lblList.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnShow

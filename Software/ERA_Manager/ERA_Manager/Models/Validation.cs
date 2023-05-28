@@ -17,6 +17,7 @@ namespace ERA_Manager.Models
         public string Preference { get; set; }
         public string PossibleDestinations { get; set; }
         public string ValidatedBy { get; set; }
+        public int StudentID { get; set; }
 
     }
 }

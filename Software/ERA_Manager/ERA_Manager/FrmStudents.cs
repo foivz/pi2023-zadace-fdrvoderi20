@@ -47,5 +47,12 @@ namespace ERA_Manager
                 ShowStudents();
             }
         }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            FrmValidatedStudents frmValidatedStudents = new FrmValidatedStudents();
+            frmValidatedStudents.ShowDialog();
+            Close();
+        }
     }
 }
