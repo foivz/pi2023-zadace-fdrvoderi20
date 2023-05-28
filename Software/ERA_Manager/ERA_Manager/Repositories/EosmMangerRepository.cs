@@ -18,7 +18,7 @@ namespace ERA_Manager.Repositories
 
         public static EosmManager GetManager(string username)
         {
-            return FetchManager($"SELECT * FROM EosmManager,Person WHERE Username = '{username}'");
+            return FetchManager($"SELECT * FROM EosmManager INNER JOIN Person ON EosmManager.Id = Person.Id WHERE Username = '{username}'");
         }
 
         private static EosmManager FetchManager(string sql)
